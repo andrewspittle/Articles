@@ -104,7 +104,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -123,7 +123,7 @@ hr {
 
 /* Text elements */
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 2rem;
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
@@ -603,4 +603,41 @@ object {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/* =Larger Viewports
+----------------------------------------------- */
+
+@media screen and (min-width: 801px) {
+	/* Layout */
+	header#masthead {
+		position: fixed;
+			right: 0;
+		height: 100%;
+		width: 20%;
+	}
+	#content {
+		padding-top: 4rem;
+		width: 80%;
+	}
+	#primary {
+		margin-left: auto;
+	    margin-right: auto;
+	    padding-left: 2rem;
+		padding-right: 2rem;
+	    max-width: 650px;
+	}
+	/* Header */
+	header#masthead .site-branding {
+		position: absolute;
+			top: 50%;
+		text-align: center;
+		width: 100%;
+	}
+	/* Content */
+	.entry-content {
+		font-size: 20px;
+		font-size: 2rem;
+		line-height: 1.5em;
+	}
 }
