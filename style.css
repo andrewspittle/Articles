@@ -315,7 +315,7 @@ textarea {
 
 /* Links */
 a {
-	color: royalblue;
+	color: #1982d1;
 }
 a:visited {
 	color: purple;
@@ -323,7 +323,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #ba2000;
 }
 
 /* Alignment */
@@ -394,6 +394,27 @@ a:active {
 .site-content:after,
 .site-footer:after {
 	clear: both;
+}
+
+
+/* =Branding
+----------------------------------------------- */
+
+header#masthead img {
+	border-radius: 5px;
+}
+header#masthead .site-title {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.8rem;
+	margin: 0 0 0.5em;
+}
+header#masthead .site-title a {
+	text-decoration: none;
+}
+header#masthead .site-description {
+	color: #666;
+	font: 13px/1.5rem "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.3rem;
 }
 
 
@@ -474,7 +495,14 @@ a:active {
 .sticky {
 }
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 3em;
+}
+.entry-title {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+.entry-title a {
+	text-decoration: none;
 }
 .byline,
 .updated {
@@ -484,10 +512,32 @@ a:active {
 .group-blog .byline {
 	display: inline;
 }
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
+.entry-meta {
+	color: #989898;
+	font: 12px/1.5rem "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.2rem;
+	margin: 0.5em 0;
+}
+.entry-content blockquote,
+.comment-content blockquote {
+	border-left: 3px solid #1982d1;
+	color: #666;
+	margin: 0;
+	padding: 0 1.5em;
+}
+.entry-meta a,
+footer#colophon a {
+	color: #989898;
+	text-decoration: none;
+}
+.entry-meta a:hover,
+.entry-meta a:focus,
+.entry-meta a:active,
+footer#colophon a:hover,
+footer#colophon a:focus,
+footer#colophon a:active {
+	border-bottom: 1px solid #e1e1e1;
+	color: #666;
 }
 .page-links {
 	clear: both;
@@ -591,6 +641,15 @@ object {
 	display: none;
 }
 
+/* =Footer
+----------------------------------------------- */
+
+#colophon {
+	color: #989898;
+	font: 13px/1.5em "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.3rem;
+}
+
 /* =Infinite Scroll
 ----------------------------------------------- */
 
@@ -611,6 +670,8 @@ object {
 @media screen and (min-width: 801px) {
 	/* Layout */
 	header#masthead {
+		background-color: #f1f1f1;
+		border-left: 5px solid #e1e1e1;
 		position: fixed;
 			right: 0;
 		height: 100%;
@@ -620,24 +681,39 @@ object {
 		padding-top: 4rem;
 		width: 80%;
 	}
-	#primary {
+	#primary,
+	footer#colophon {
 		margin-left: auto;
 	    margin-right: auto;
 	    padding-left: 2rem;
 		padding-right: 2rem;
-	    max-width: 650px;
+	    max-width: 565px;
 	}
 	/* Header */
 	header#masthead .site-branding {
 		position: absolute;
-			top: 50%;
+			top: 45%;
 		text-align: center;
 		width: 100%;
 	}
+	header#masthead .site-branding img {
+		margin: 0 0 0.5em;
+		max-width: 75px;
+		height: inherit;
+	}
 	/* Content */
+	.entry-title {
+		font-size: 24px;
+		font-size: 2.4rem;
+		line-height: 1.25em;
+	}
 	.entry-content {
-		font-size: 20px;
-		font-size: 2rem;
+		font-size: 16px;
+		font-size: 1.6rem;
 		line-height: 1.5em;
+	}
+	/* Footer */
+	footer#colophon {
+		margin: 1em auto;
 	}
 }
