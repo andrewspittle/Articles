@@ -68,3 +68,16 @@ function articles_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'articles_wp_title', 10, 2 );
+
+/**
+ * Filters the_excerpt to a shorter length and customizes the [...] ending.
+ */
+function articles_excerpt_length( $length ) {
+	return 25;
+}
+add_filter( 'excerpt_length', 'articles_excerpt_length', 999 );
+
+function articles_excerpt_more( $more ) {
+	return '...';
+}
+add_filter( 'excerpt_more', 'articles_excerpt_more' );
