@@ -29,9 +29,9 @@ function articles_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'articles_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000',
-		'width'                  => 1000,
+		'width'                  => 250,
 		'height'                 => 250,
-		'flex-height'            => true,
+		'flex-height'            => false,
 		'wp-head-callback'       => 'articles_header_style',
 		'admin-head-callback'    => 'articles_admin_header_style',
 		'admin-preview-callback' => 'articles_admin_header_image',
