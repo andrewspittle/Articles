@@ -47,14 +47,6 @@ function articles_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'articles' ),
 	) );
-
-	/**
-	 * Setup the WordPress core custom background feature.
-	 */
-	add_theme_support( 'custom-background', apply_filters( 'articles_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // articles_setup
 add_action( 'after_setup_theme', 'articles_setup' );
