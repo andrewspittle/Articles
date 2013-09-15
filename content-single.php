@@ -24,7 +24,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
-		<?php the_tags(); ?>
+		<?php the_tags( '', ', ', '' ); ?>
 
 		<?php edit_post_link( __( 'Edit', 'articles' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
