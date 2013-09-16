@@ -110,3 +110,13 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Remove URL field from the comment form
+ */
+add_filter( 'comment_form_default_fields', 'articles_remove_url' );
+
+function articles_remove_url( $arg ) {
+    $arg['url'] = '';
+    return $arg;
+}
