@@ -618,12 +618,119 @@ object {
 /* =Comments
 ----------------------------------------------- */
 
+#comments {
+	border-top: 1px solid #e1e1e1;
+	padding: 1.5em 0 0 0;
+}
+.comments-title,
+#reply-title {
+	color: #666;
+	font: normal bold 22px/1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0 0 1.5em;
+}
+.comment-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.comment-list .children {
+	list-style-type: none;
+	margin: 3em 0 0;
+}
+.comment-list li.comment {
+	border-bottom: 1px solid #f1f1f1;
+	margin: 0 0 1.5em 0;
+	padding-bottom: 1.5em;
+}
+.comment-list li:last-of-type {
+	border-bottom: none;
+}
+.comment-list .children li {
+	border-bottom: 0;
+	margin-left: 8.6125%;
+}
+.comment-list .children li:last-of-type {
+	padding: 0;
+}
+.comment-author cite,
+.comment-author span {
+	font: normal bold 18px/1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	vertical-align: top;
+}
+.comment-metadata a,
+.reply a {
+	color: #989898;
+	font: 13px/1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+}
+.comment-meta a:hover,
+.comment-meta a:focus,
+.comment-meta a:active,
+.reply a:hover,
+.reply a:focus,
+.reply a:active {
+	border-bottom: 1px solid #e1e1e1;
+	color: #666;
+}
+.comment-content {
+	font: 16px/1.5em Georgia, Times, serif;
+}
 .comment-content a {
 	word-wrap: break-word;
 }
 .bypostauthor {
 }
 
+/* Comment Form */
+.comment-notes,
+.logged-in-as {
+	color: #666;
+	font-size: 14px;
+}
+#commentform label {
+	color: #989898;
+	display: block;
+	font: 12px/1.1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin-bottom: 0.5em;
+}
+#commentform .required {
+	color: #ba2000;
+}
+#commentform input#author,
+#commentform input#email {
+	border: none;
+	border-bottom: 1px dashed #ccc;
+	width: 95%;
+}
+#commentform textarea#comment {
+	border-style: dashed;
+	width: 97%;
+}
+.comment-form-author,
+.comment-form-email {
+	display: inline-block;
+	margin: 0 0.25% 1em 0.25%;
+	width: 49%;
+}
+#commentform input,
+#commentform textarea {
+	font: 18px/1.5em Georgia, Times, serif;
+}
+.form-allowed-tags {
+	color: #666;
+	font-size: 13px;
+	line-height: 1.65em;
+	float: left;
+	width: 70%;
+}
+.form-allowed-tags code {
+	font-size: 12px;
+}
+#commentform input#submit {
+	float: right;
+	font: 14px/1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0 2% 1em 0;
+}
 /* =Widgets
 ----------------------------------------------- */
 
