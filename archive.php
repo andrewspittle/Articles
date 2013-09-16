@@ -18,17 +18,17 @@ get_header(); ?>
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
-							single_cat_title();
+							single_cat_title( 'Posts categorized: ' );
 
 						elseif ( is_tag() ) :
-							single_tag_title();
+							single_tag_title( 'Posts tagged: ' );
 
 						elseif ( is_author() ) :
 							/* Queue the first post, that way we know
 							 * what author we're dealing with (if that is the case).
 							*/
 							the_post();
-							printf( __( 'Author: %s', 'articles' ), '<span class="vcard">' . get_the_author() . '</span>' );
+							printf( __( 'Posts by: %s', 'articles' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							/* Since we called the_post() above, we need to
 							 * rewind the loop back to the beginning that way
 							 * we can run the loop properly, in full.
@@ -36,13 +36,13 @@ get_header(); ?>
 							rewind_posts();
 
 						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'articles' ), '<span>' . get_the_date() . '</span>' );
+							printf( __( 'Posts from: %s', 'articles' ), '<span>' . get_the_date() . '</span>' );
 
 						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'articles' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+							printf( __( 'Posts from: %s', 'articles' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'articles' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+							printf( __( 'Posts from: %s', 'articles' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 							_e( 'Asides', 'articles' );
