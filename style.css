@@ -681,8 +681,12 @@ object {
 		padding-top: 4rem;
 		width: 80%;
 	}
-	#primary,
 	footer#colophon {
+		width: 80%;
+	}
+	#primary,
+	#secondary,
+	footer#colophon .site-info {
 		margin-left: auto;
 	    margin-right: auto;
 	    padding-left: 2rem;
@@ -714,6 +718,8 @@ object {
 	}
 	/* Footer */
 	footer#colophon {
-		margin: 1em auto;
+		border-top: 1px solid #e1e1e1;
+		margin: 1em 0;
+		padding: 1em 0 0;
 	}
 }
