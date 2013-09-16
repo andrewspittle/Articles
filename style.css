@@ -626,7 +626,13 @@ object {
 
 #comments {
 	border-top: 1px solid #e1e1e1;
+	margin: 0 0 3em;
 	padding: 1.5em 0 0 0;
+}
+#comments:after {
+    clear: both;
+    content: "";
+    display: table;
 }
 .comments-title,
 #reply-title {
