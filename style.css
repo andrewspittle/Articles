@@ -771,6 +771,31 @@ object {
 	width: 100%;
 }
 
+/* =Archives
+----------------------------------------------- */
+
+.search .page-header,
+.archive .page-header {
+	border-bottom: 1px solid #e1e1e1;
+	margin: 0 0 2em;
+	padding: 0 0 2em;
+}
+.search .page-title,
+.archive .page-title,
+.archive .taxonomy-description {
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5em;
+}
+.archive .page-title {
+	text-transform: uppercase;
+}
+.archive .taxonomy-description p {
+	color: #666;
+	font-style: italic;
+	margin: 0;
+}
+
 /* =Footer
 ----------------------------------------------- */
 
