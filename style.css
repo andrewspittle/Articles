@@ -526,6 +526,7 @@ header#masthead .site-description {
 	padding: 0 1.5em;
 }
 .entry-meta a,
+#nav-below a,
 footer#colophon a {
 	color: #989898;
 	text-decoration: none;
@@ -533,6 +534,9 @@ footer#colophon a {
 .entry-meta a:hover,
 .entry-meta a:focus,
 .entry-meta a:active,
+#nav-below a:hover,
+#nav-below a:focus,
+#nav-below a:active,
 footer#colophon a:hover,
 footer#colophon a:focus,
 footer#colophon a:active {
@@ -602,7 +606,9 @@ object {
 ----------------------------------------------- */
 
 .site-main [class*="navigation"] {
-	margin: 0 0 1.5em;
+	font: 13px/1.5em "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.3rem;
+	margin: 0 0 3em;
 	overflow: hidden;
 }
 [class*="navigation"] .nav-previous {
@@ -731,6 +737,7 @@ object {
 	font: 14px/1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	margin: 0 2% 1em 0;
 }
+
 /* =Widgets
 ----------------------------------------------- */
 
@@ -832,6 +839,10 @@ object {
 		font-size: 16px;
 		font-size: 1.6rem;
 		line-height: 1.5em;
+	}
+	/* Sidebar */
+	#secondary {
+		padding: 1em 0;
 	}
 	/* Footer */
 	footer#colophon {
