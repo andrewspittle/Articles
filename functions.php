@@ -40,6 +40,11 @@ function articles_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	
+	/**
+	 * Register custom image sizes
+	 */
+	add_image_size( 'featured-single', 565, 9999 ); //737 pixels wide, unlimited height
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
