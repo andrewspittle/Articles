@@ -747,6 +747,16 @@ object {
 .widget_search .search-submit {
 	display: none;
 }
+.widget_search {
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+}
+.widget_search input {
+	font: 13px/1.5em "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.3rem;
+	width: 100%;
+}
 
 /* =Footer
 ----------------------------------------------- */
