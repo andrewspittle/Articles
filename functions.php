@@ -44,7 +44,8 @@ function articles_setup() {
 	/**
 	 * Register custom image sizes
 	 */
-	add_image_size( 'featured-single', 565, 9999 ); //737 pixels wide, unlimited height
+	add_image_size( 'featured-single', 565, 9999 ); //565 pixels wide, unlimited height
+	add_image_size( 'featured-thumbnail', 100, 100, true ); //100 pixels square
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
