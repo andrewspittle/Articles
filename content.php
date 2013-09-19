@@ -9,7 +9,7 @@
 		<section class="hero-image">
 			<?php
 				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-				  the_post_thumbnail( 'featured-single' ); // use the custom image size we've set in functions.php
+				  the_post_thumbnail( 'thumbnail' ); // use the custom image size we've set in functions.php
 				}
 			?>
 		</section>
