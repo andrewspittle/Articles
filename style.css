@@ -531,6 +531,9 @@ header#masthead .site-description {
 	font-size: 1.2rem;
 	margin: 0.5em 0;
 }
+.single .entry-meta {
+	margin: 0.5em 0 1.5em 0;
+}
 .entry-content blockquote,
 .comment-content blockquote {
 	border-left: 3px solid #1982d1;
