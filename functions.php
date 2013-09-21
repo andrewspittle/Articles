@@ -138,3 +138,34 @@ function articles_remove_url( $arg ) {
     $arg['url'] = '';
     return $arg;
 }
+
+/**
+ * Return the first link from the post content. If none found, the
+ * post permalink is used as a fallback.
+ *
+ * @uses get_url_in_content() to get the first URL from the post content.
+ *
+ * @return string
+ */
+function articles_get_first_url() {
+	$content = get_the_content();
+	$has_url = function_exists( 'get_url_in_content' ) ? get_url_in_content( $content ) : false;
+
+	if ( ! $has_url )
+		$has_url = articles_url_grabber();
+
+	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
+}
+
+/**
+ * Return the URL for the first link found in the post content.
+ *
+ * @since Articles 1.0
+ * @return string|bool URL or false when no link is present.
+ */
+function articles_url_grabber() {
+	if ( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', get_the_content(), $matches ) )
+		return false;
+
+	return esc_url_raw( $matches[1] );
+}
