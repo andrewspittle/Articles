@@ -6,11 +6,20 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-			the_post_thumbnail( 'featured-thumbnail', array( 'class' => 'heroimage' ) ); // use the custom image size we've set in functions.php
-		} ?>
+		<?php
+			if ( has_post_thumbnail() && ! is_single() ) { // check for a Post Thumbnail and a non-single template
+				the_post_thumbnail( 'featured-thumbnail', array( 'class' => 'heroimage' ) );
+			}
+			elseif ( has_post_thumbnail() && is_single() ) { // check for a Post Thumbnail and a single template
+				the_post_thumbnail( 'featured-single' );
+			}
+			?>
 		
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<?php if ( !is_single() ) : ?>
+			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'minimal_stream' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<?php else : ?>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+		<?php endif; ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -19,11 +28,25 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php if ( ! is_single() ) : // Only display Excerpts most places ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+	<?php else : ?>
+	<div class="entry-content">
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'plain' ) ); ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'plain' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
+	<?php endif; ?>
 
 	<footer class="entry-meta">
+		<?php the_tags( '<div class="entry-tags">', ', ', '</div>' ); ?>
+	
 		<?php edit_post_link( __( 'Edit', 'articles' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
