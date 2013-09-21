@@ -33,6 +33,11 @@ function articles_setup() {
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
+	
+	/**
+	 * Add support for a variety of post formats
+	 */
+	add_theme_support( 'post-formats', array( 'link' ) );
 
 	/**
 	 * Enable support for Post Thumbnails on posts and pages
