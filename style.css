@@ -559,6 +559,21 @@ footer#colophon a:active {
 	border-bottom: 1px solid #e1e1e1;
 	color: #666;
 }
+.entry-meta .entry-tags:before {
+	color: #cccccc;
+	content: '\f302';
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1em 'Genericons';
+	vertical-align: text-bottom;
+}
+.entry-meta .entry-tags {
+	display: inline-block;
+}
+.edit-link {
+	display: inline-block;
+	float: right;
+}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
