@@ -66,13 +66,15 @@ add_action( 'after_setup_theme', 'articles_setup' );
  * Register widgetized area and update sidebar with default widgets
  */
 function articles_widgets_init() {
+	register_widget( 'Articles_Ephemera_Widget' );
+
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'articles' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'articles_widgets_init' );
@@ -101,6 +103,11 @@ add_action( 'wp_enqueue_scripts', 'articles_scripts' );
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Grab Articles' Ephemera widget
+ */
+require get_template_directory() . '/inc/widgets.php';
 
 /**
  * Custom template tags for this theme.
