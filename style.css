@@ -354,6 +354,11 @@ a:active {
 }
 
 /* Text meant only for screen readers */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -883,8 +888,9 @@ h3.widget-title {
 @media screen and (max-width: 800px) {
 	/* Layout */
 	header#masthead {
-		padding: 2% 10%;
-		width: 80%;
+		margin: 0 auto;
+		padding: 2% 2rem;
+		max-width: 565px
 	}
 	#content {
 		padding: 0 10%;
@@ -893,7 +899,7 @@ h3.widget-title {
 	}
 	footer#colophon {
 		margin: 2em 0 0;
-		padding: 1em 10%;
+		padding: 1em 10% 4em 10%;
 		width: 80%;
 	}
 	#primary,
@@ -905,16 +911,42 @@ h3.widget-title {
 	}
 	/* Header */
 	header#masthead .site-branding {
-		text-align: center;
+		margin: 2em 0;
+		text-align: left;
 		width: 100%;
 	}
 	header#masthead .site-branding img {
-		margin: 2em 0 0 0;
+		float: left;
+		margin: 0 4% 0 0;
 		max-width: 75px;
+		width: 15%;
 		height: inherit;
 	}
 	header#masthead .site-title {
-		margin: 0;
+		display: inline-block;
+		margin: 0 0 0.5em;
+		vertical-align: top;
+		width: 80%;
+	}
+	header#masthead .site-description {
+		display: inline-block;
+		vertical-align: top;
+		width: 80%;
+	}
+	/* Navigation */
+	nav.main-navigation {
+		background-color: #f1f1f1;
+		padding: 10px 5%;
+		position: fixed;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		max-width: 90%;
+		z-index: 2;
+	}
+	nav.main-navigation li {
+		font-size: 14px;
+		margin-right: 20px;
 	}
 	/* Content */
 	.entry-title {
@@ -931,7 +963,29 @@ h3.widget-title {
 	.heroimage {
 		display: none;
 	}
-
+	/* Image format */
+	.archive.term-post-format-image #content,
+	.single-format-image #content {
+		margin: 0 auto;
+		width: 100%;
+		padding: 0;
+	}
+	.archive.term-post-format-image #primary,
+	.single-format-image #primary {
+		max-width: 100%;
+		padding: 0;
+	}
+	.archive.term-post-format-image .page-header,
+	.archive.term-post-format-image .entry-content,
+	.single-format-image .entry-content,
+	.archive.term-post-format-image .entry-meta,
+	.single-format-image .entry-meta,
+	.archive.term-post-format-image #nav-below,
+	.single-format-image #nav-below {
+		margin: 0 auto;
+		padding: 0 5%;
+		max-width: 565px;
+	}
 	/* Footer */
 	footer#colophon {
 		border-top: 1px solid #e1e1e1;
@@ -945,11 +999,11 @@ h3.widget-title {
 	/* Layout */
 	header#masthead {
 		background-color: #f1f1f1;
-		border-left: 5px solid #e1e1e1;
 		position: fixed;
 			right: 0;
 		height: 100%;
 		width: 20%;
+		min-width: 185px;
 	}
 	#content {
 		padding-top: 4rem;
@@ -970,8 +1024,6 @@ h3.widget-title {
 	/* Header */
 	header#masthead .site-branding {
 		padding: 2em;
-		position: absolute;
-			top: 0;
 		text-align: left;
 		width: auto;
 	}
@@ -979,6 +1031,14 @@ h3.widget-title {
 		margin: 0 0 0.5em;
 		max-width: 75px;
 		height: inherit;
+	}
+	nav.main-navigation {
+		position: relative;
+		padding: 0 2em;
+	}
+	nav.main-navigation li {
+		display: block;
+		float: none;
 	}
 	/* Content */
 	.entry-title {
@@ -996,8 +1056,33 @@ h3.widget-title {
 		border-radius: 50%;
 		display: block;
 		position: absolute;
-			left: -120px;
+			left: -130px;
 			top: 0;
+	}
+	/* Image format */
+	.single-format-image #content {
+		padding-top: 0;
+	}
+	.archive.term-post-format-image #primary,
+	.single-format-image #primary {
+		margin: 0 auto;
+		max-width: 1200px;
+		padding: 0;
+	}
+	.archive.term-post-format-image .page-header,
+	.archive.term-post-format-image .entry-content,
+	.single-format-image .entry-content,
+	.archive.term-post-format-image footer.entry-meta,
+	.single-format-image footer.entry-meta
+	.archive.term-post-format-image #nav-below,
+	.single-format-image #nav-below {
+		margin: 0 auto;
+		max-width: 565px;
+	}
+	.archive.term-post-format-image .entry-meta,
+	.single-format-image .entry-meta {
+		margin: inherit auto;
+		max-width: 565px;
 	}
 	/* Sidebar */
 	#secondary {
@@ -1017,13 +1102,25 @@ h3.widget-title {
 @media screen and (max-width: 500px) {
 	/* Layout */
 	header#masthead,
-	#content,
-	footer#colophon {
-		padding: 2%;
-		width: 96%;
-	}
 	#content {
-		padding-top: 2em;
+		padding: 1em 5% 0 5%;
+		width: 90%;
+	}
+	#primary,
+	#secondary,
+	footer#colophon .site-info {
+		padding: 0;
+	}
+	/* Header */
+	header#masthead .site-branding {
+		margin: 1em 0;
+	}
+	header#masthead .site-title {
+		margin-top: 0.4em;
+		vertical-align: top;
+	}
+	header#masthead .site-description {
+		display: none;
 	}
 	/* Content */
 	.entry-title {
