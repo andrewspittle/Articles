@@ -172,3 +172,16 @@ function exclude_non_standard_post_formats_from_loop( &$wp_query ) {
 
 // Call our above action before each WP query
 add_action( 'pre_get_posts', 'exclude_non_standard_post_formats_from_loop' );
+
+/**
+ * Filter images out of the_content
+ * Since images are pulled separately for Image Format posts we'll remove them from the_content
+ */
+function articles_remove_images( $content ) {
+	if ( 'image' == get_post_format() ) :
+		return preg_replace( '/<img[^>]+./', '', $content );
+	else :
+		return $content;
+	endif;
+}
+add_filter( 'the_content', 'articles_remove_images', 2 );
