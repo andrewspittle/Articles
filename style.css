@@ -790,6 +790,23 @@ object {
 ----------------------------------------------- */
 
 .widget {
+	display: inline-block;
+	margin: 0 2.5% 1.5em 2.5%;
+	vertical-align: top;
+	width: 45%;
+}
+h3.widget-title {
+	font: 13px/1.5em "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.3rem;
+}
+.widget ul {
+	list-style-type: none;
+	margin: 0;
+}
+.widget li {
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.75em;
 }
 
 /* Make sure select elements fit in widgets */
@@ -952,10 +969,11 @@ object {
 	}
 	/* Header */
 	header#masthead .site-branding {
+		padding: 2em;
 		position: absolute;
-			top: 45%;
-		text-align: center;
-		width: 100%;
+			top: 0;
+		text-align: left;
+		width: auto;
 	}
 	header#masthead .site-branding img {
 		margin: 0 0 0.5em;
@@ -1017,6 +1035,18 @@ object {
 		font-size: 14px;
 		font-size: 1.4rem;
 		line-height: 1.5em;
+	}
+	/* Widgets */
+	.widget {
+		display: block;
+		margin: 0 0 1.5em;
+		width: 100%;
+	}
+	/* Footer */
+	#colophon .sep {
+		display: block;
+		height: 0;
+		visibility: hidden;
 	}
 }
 
