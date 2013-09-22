@@ -37,7 +37,7 @@ function articles_setup() {
 	/**
 	 * Add support for a variety of post formats
 	 */
-	add_theme_support( 'post-formats', array( 'link' ) );
+	add_theme_support( 'post-formats', array( 'link', 'image' ) );
 
 	/**
 	 * Enable support for Post Thumbnails on posts and pages
@@ -66,8 +66,6 @@ add_action( 'after_setup_theme', 'articles_setup' );
  * Register widgetized area and update sidebar with default widgets
  */
 function articles_widgets_init() {
-	register_widget( 'Articles_Ephemera_Widget' );
-
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'articles' ),
 		'id'            => 'sidebar-1',
@@ -105,11 +103,6 @@ add_action( 'wp_enqueue_scripts', 'articles_scripts' );
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Grab Articles' Ephemera widget
- */
-require get_template_directory() . '/inc/widgets.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -137,37 +130,6 @@ add_filter( 'comment_form_default_fields', 'articles_remove_url' );
 function articles_remove_url( $arg ) {
     $arg['url'] = '';
     return $arg;
-}
-
-/**
- * Return the first link from the post content. If none found, the
- * post permalink is used as a fallback.
- *
- * @uses get_url_in_content() to get the first URL from the post content.
- *
- * @return string
- */
-function articles_get_first_url() {
-	$content = get_the_content();
-	$has_url = function_exists( 'get_url_in_content' ) ? get_url_in_content( $content ) : false;
-
-	if ( ! $has_url )
-		$has_url = articles_url_grabber();
-
-	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
-}
-
-/**
- * Return the URL for the first link found in the post content.
- *
- * @since Articles 1.0
- * @return string|bool URL or false when no link is present.
- */
-function articles_url_grabber() {
-	if ( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', get_the_content(), $matches ) )
-		return false;
-
-	return esc_url_raw( $matches[1] );
 }
 
 /**
