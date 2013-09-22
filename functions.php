@@ -52,6 +52,7 @@ function articles_setup() {
 	add_image_size( 'featured-single', 565, 9999 ); //565 pixels wide, unlimited height
 	add_image_size( 'featured-thumbnail', 100, 100, true ); //100 pixels square
 	add_image_size( 'image-format', 1200, 625, true ); //1200 pixels wide, 625 pixel tall
+	add_image_size( 'image-format-single', 1200, 9999, false ); //1200 pixels wide, unlimited height
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
