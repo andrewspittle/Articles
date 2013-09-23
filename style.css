@@ -497,7 +497,6 @@ header#masthead .site-description {
 	.main-navigation.toggled .nav-menu {
 		display: block;
 	}
-
 	.main-navigation ul {
 		display: none;
 	}
@@ -571,8 +570,10 @@ footer#colophon a:active {
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px/1em 'Genericons';
 	vertical-align: text-bottom;
+	margin-left: 10px;
 }
-.entry-meta .entry-tags {
+.entry-meta .entry-tags,
+article.format-link .entry-date {
 	display: inline-block;
 }
 .edit-link {
