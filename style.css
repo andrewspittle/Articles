@@ -839,15 +839,15 @@ h3.widget-title {
 
 .search .page-header,
 .archive .page-header {
-	border-bottom: 1px solid #e1e1e1;
 	margin: 0 0 2em;
 	padding: 0 0 2em;
 }
 .search .page-title,
 .archive .page-title,
 .archive .taxonomy-description {
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: bold;
 	line-height: 1.5em;
 }
 .archive .page-title {
@@ -888,13 +888,13 @@ h3.widget-title {
 @media screen and (max-width: 800px) {
 	/* Layout */
 	header#masthead {
+		border-bottom: 1px solid #e1e1e1;
 		margin: 0 auto;
-		padding: 2% 2rem;
+		padding: 1em;
 		max-width: 565px
 	}
 	#content {
-		padding: 0 10%;
-		padding-top: 4rem;
+		padding: 2em 10%;
 		width: 80%;
 	}
 	footer#colophon {
