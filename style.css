@@ -840,8 +840,9 @@ h3.widget-title {
 
 .search .page-header,
 .archive .page-header {
-	margin: 0 0 2em;
+	margin: 0 auto 0 auto;
 	padding: 0 0 2em;
+	max-width: 565px;
 }
 .search .page-title,
 .archive .page-title,
@@ -889,25 +890,21 @@ h3.widget-title {
 @media screen and (max-width: 800px) {
 	/* Layout */
 	header#masthead {
-		border-bottom: 1px solid #e1e1e1;
-		margin: 0 auto;
-		padding: 1em;
+		margin: 2em auto;
 		max-width: 565px
 	}
-	#content {
-		padding: 2em 10%;
-		width: 80%;
-	}
 	footer#colophon {
-		margin: 2em 0 0;
-		padding: 1em 10% 4em 10%;
-		width: 80%;
+		margin: 2em auto 0 auto;
+		padding: 1em 5% 4em 5%;
+		width: 90%;
+		max-width: 565px;
 	}
-	#primary,
-	#secondary,
-	footer#colophon .site-info {
-	    padding-left: 2rem;
-		padding-right: 2rem;
+	article.post,
+	#content #nav-below,
+	#secondary {
+		margin: 0 auto 3em auto;
+	    padding-left: 5%;
+		padding-right: 5%;
 	    max-width: 565px;
 	}
 	/* Header */
@@ -965,26 +962,19 @@ h3.widget-title {
 		display: none;
 	}
 	/* Image format */
-	.archive.term-post-format-image #content,
 	.single-format-image #content {
-		margin: 0 auto;
-		width: 100%;
-		padding: 0;
+		padding-top: 0;
 	}
-	.archive.term-post-format-image #primary,
-	.single-format-image #primary {
+	article.post.format-image {
+		margin: 0 auto 3em auto;
 		max-width: 100%;
 		padding: 0;
 	}
 	.archive.term-post-format-image .page-header,
-	.archive.term-post-format-image .entry-content,
-	.single-format-image .entry-content,
-	.archive.term-post-format-image .entry-meta,
-	.single-format-image .entry-meta,
-	.archive.term-post-format-image #nav-below,
+	article.post.format-image .entry-content,
+	article.post.format-image footer.entry-meta,
 	.single-format-image #nav-below {
 		margin: 0 auto;
-		padding: 0 5%;
 		max-width: 565px;
 	}
 	/* Footer */
@@ -1013,7 +1003,7 @@ h3.widget-title {
 	footer#colophon {
 		width: 80%;
 	}
-	#primary,
+	article.post,
 	#secondary,
 	footer#colophon .site-info {
 		margin-left: auto;
@@ -1064,24 +1054,19 @@ h3.widget-title {
 	.single-format-image #content {
 		padding-top: 0;
 	}
-	.archive.term-post-format-image #primary,
-	.single-format-image #primary {
-		margin: 0 auto;
+	article.post.format-image {
+		margin: 0 auto 3em auto;
 		max-width: 1200px;
 		padding: 0;
 	}
 	.archive.term-post-format-image .page-header,
-	.archive.term-post-format-image .entry-content,
-	.single-format-image .entry-content,
-	.archive.term-post-format-image footer.entry-meta,
-	.single-format-image footer.entry-meta
-	.archive.term-post-format-image #nav-below,
+	article.post.format-image .entry-content,
+	article.post.format-image footer.entry-meta,
 	.single-format-image #nav-below {
 		margin: 0 auto;
 		max-width: 565px;
 	}
-	.archive.term-post-format-image .entry-meta,
-	.single-format-image .entry-meta {
+	article.post.format-image .entry-meta {
 		margin: inherit auto;
 		max-width: 565px;
 	}
@@ -1102,23 +1087,28 @@ h3.widget-title {
 
 @media screen and (max-width: 500px) {
 	/* Layout */
-	header#masthead,
-	#content {
-		padding: 1em 5% 0 5%;
+	header#masthead {
+		padding: 0 5%;
 		width: 90%;
 	}
-	#primary,
-	#secondary,
-	footer#colophon .site-info {
-		padding: 0;
+	article.post,
+	#content #nav-below,
+	.page-header,
+	#secondary {
+		padding: 0 5%;
+		width: 90%;
 	}
 	/* Header */
 	header#masthead .site-branding {
-		margin: 1em 0;
+		margin: 0;
+	}
+	header#masthead .site-branding img {
+		width: 50px;
 	}
 	header#masthead .site-title {
-		margin-top: 0.4em;
+		margin-top: 0.5em;
 		vertical-align: top;
+		width: 70%;
 	}
 	header#masthead .site-description {
 		display: none;
@@ -1133,6 +1123,19 @@ h3.widget-title {
 		font-size: 14px;
 		font-size: 1.4rem;
 		line-height: 1.5em;
+	}
+	/* Image format */
+	article.post.format-image {
+		margin: 0 auto 3em auto;
+		width: 100%;
+		padding: 0;
+	}
+	.archive.term-post-format-image .page-header,
+	article.post.format-image .entry-content,
+	article.post.format-image footer.entry-meta,
+	.single-format-image #nav-below {
+		margin: 0 auto;
+		max-width: 90%;
 	}
 	/* Widgets */
 	.widget {
@@ -1152,10 +1155,28 @@ h3.widget-title {
 ----------------------------------------------- */
 
 @media screen and (min-width: 501px) and (max-width: 700px) {
+	/* Layout */
 	header#masthead,
-	#content,
-	footer#colophon {
-		padding: 5%;
+	article.post,
+	#content #nav-below,
+	.page-header {
+		padding: 0 5%;
 		width: 90%;
+	}
+	#content {
+		padding-top: 0;
+	}
+	/* Image format */
+	article.post.format-image {
+		margin: 0 auto 3em auto;
+		width: 100%;
+		padding: 0;
+	}
+	.archive.term-post-format-image .page-header,
+	article.post.format-image .entry-content,
+	article.post.format-image footer.entry-meta,
+	.single-format-image #nav-below {
+		margin: 0 auto;
+		max-width: 90%;
 	}
 }
