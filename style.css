@@ -903,7 +903,8 @@ h3.widget-title {
 	}
 	article.post,
 	#content #nav-below,
-	#secondary {
+	#secondary,
+	#comments {
 		margin: 0 auto 3em auto;
 	    padding-left: 5%;
 		padding-right: 5%;
@@ -1008,7 +1009,8 @@ h3.widget-title {
 	article.post,
 	#secondary,
 	#content #nav-below,
-	footer#colophon .site-info {
+	footer#colophon .site-info,
+	#comments {
 		margin-left: auto;
 	    margin-right: auto;
 	    padding-left: 2rem;
@@ -1097,7 +1099,8 @@ h3.widget-title {
 	article.post,
 	#content #nav-below,
 	.page-header,
-	#secondary {
+	#secondary,
+	#comments {
 		padding: 0 5%;
 		width: 90%;
 	}
