@@ -570,11 +570,13 @@ footer#colophon a:active {
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px/1em 'Genericons';
 	vertical-align: text-bottom;
-	margin-left: 10px;
 }
 .entry-meta .entry-tags,
 article.format-link .entry-date {
 	display: inline-block;
+}
+article.format-link .entry-date {
+	margin-right: 10px;
 }
 .edit-link {
 	display: inline-block;
