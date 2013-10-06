@@ -58,6 +58,9 @@ get_header(); ?>
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 							_e( 'Links', 'articles' );
+							
+						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
+							_e( 'Galleries', 'articles' );
 
 						else :
 							_e( 'Archives', 'articles' );
