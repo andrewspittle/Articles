@@ -103,7 +103,7 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #33332B;
 	font-family: Georgia, Times, serif;
 	font-size: 16px;
 	font-size: 1.6rem;
@@ -113,6 +113,7 @@ textarea {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 hr {
 	background-color: #ccc;
@@ -133,7 +134,8 @@ hr {
     font-style: normal;
 }
 p {
-	margin-bottom: 2rem;
+	font-weight: 400;
+	margin-bottom: 1em;
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
@@ -419,7 +421,6 @@ header#masthead img {
 	border-radius: 5px;
 }
 header#masthead .site-title {
-	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 1.8rem;
 	margin: 0 0 0.5em;
 }
@@ -428,8 +429,9 @@ header#masthead .site-title a {
 }
 header#masthead .site-description {
 	color: #666;
-	font: 13px/1.5rem "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 13px;
 	font-size: 1.3rem;
+	line-height: 1.5em;
 }
 
 
@@ -509,14 +511,13 @@ header#masthead .site-description {
 .sticky {
 }
 .hentry {
-	margin: 0 0 4em;
+	margin: 1em 0 3em;
 }
 .entry-header {
 	position: relative;
 }
 .entry-title {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-weight: 300;
+	font-weight: bold;
 }
 .entry-title a {
 	text-decoration: none;
@@ -588,6 +589,24 @@ article.format-link .entry-date {
 }
 
 
+/* =Gallery and Image Formats
+----------------------------------------------- */
+
+.format-gallery .entry-header {
+	position: inherit;
+}
+.attachment .entry-header,
+.attachment .entry-caption {
+	margin: 0 auto;
+	max-width: 565px;
+}
+#content article.post.format-gallery .entry-meta,
+#content article.post.format-image .entry-meta {
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+
 /* =Media
 ----------------------------------------------- */
 
@@ -640,7 +659,9 @@ article.format-link .entry-date {
 }
 
 /* Featured image */
-.attachment-featured-single {
+.attachment-media-feature,
+.attachment-featured-single,
+.attachment-media-feature-single {
 	margin-bottom: 1em;
 }
 
@@ -892,8 +913,12 @@ h3.widget-title {
 @media screen and (max-width: 800px) {
 	/* Layout */
 	header#masthead {
-		margin: 2em auto;
-		max-width: 565px
+		background-color: #f1f1f1;
+		margin: 0;
+		max-width: 100%;
+	}
+	#content {
+		padding-top: 2em;
 	}
 	footer#colophon {
 		margin: 2em auto 0 auto;
@@ -912,9 +937,9 @@ h3.widget-title {
 	}
 	/* Header */
 	header#masthead .site-branding {
-		margin: 2em 0;
+		margin: 2em auto;
 		text-align: left;
-		width: 100%;
+		max-width: 565px;
 	}
 	header#masthead .site-branding img {
 		float: left;
@@ -925,6 +950,9 @@ h3.widget-title {
 	}
 	header#masthead .site-title {
 		display: inline-block;
+		font-size: 24px;
+		font-size: 2.4rem;
+		line-height: 1em;
 		margin: 0 0 0.5em;
 		vertical-align: top;
 		width: 80%;
@@ -945,6 +973,10 @@ h3.widget-title {
 		max-width: 90%;
 		z-index: 2;
 	}
+	nav.main-navigation ul {
+		margin: 0 auto;
+		max-width: 565px;
+	}
 	nav.main-navigation li {
 		font-size: 14px;
 		margin-right: 20px;
@@ -956,8 +988,8 @@ h3.widget-title {
 		line-height: 1.25em;
 	}
 	.entry-content {
-		font-size: 16px;
-		font-size: 1.6rem;
+		font-size: 18px;
+		font-size: 1.8rem;
 		line-height: 1.5em;
 	}
 	/* Featured images */
@@ -965,10 +997,12 @@ h3.widget-title {
 		display: none;
 	}
 	/* Image format */
-	.single-format-image #content {
+	.single-format-image #content,
+	.single-format-gallery #content {
 		padding-top: 0;
 	}
-	article.post.format-image {
+	article.post.format-image,
+	article.post.format-gallery {
 		margin: 0 auto 3em auto;
 		max-width: 100%;
 		padding: 0;
@@ -976,7 +1010,13 @@ h3.widget-title {
 	.archive.term-post-format-image .page-header,
 	article.post.format-image .entry-content,
 	article.post.format-image footer.entry-meta,
-	.single-format-image #nav-below {
+	.single-format-image #nav-below,
+	.archive.term-post-format-gallery .page-header,
+	article.post.format-gallery .entry-content,
+	article.post.format-gallery .entry-summary,
+	article.post.format-gallery .entry-title,
+	article.post.format-gallery .entry-meta,
+	.single-format-gallery #nav-below {
 		margin: 0 auto;
 		max-width: 565px;
 	}
@@ -1000,7 +1040,7 @@ h3.widget-title {
 		min-width: 185px;
 	}
 	#content {
-		padding-top: 4rem;
+		padding-top: 2em;
 		width: 80%;
 	}
 	footer#colophon {
@@ -1042,10 +1082,11 @@ h3.widget-title {
 		font-size: 2.4rem;
 		line-height: 1.25em;
 	}
-	.entry-content {
-		font-size: 16px;
-		font-size: 1.6rem;
-		line-height: 1.5em;
+	.entry-content,
+	.entry-summary {
+		font-size: 18px;
+		font-size: 1.8rem;
+		line-height: 1.55em;
 	}
 	/* Featured images */
 	.heroimage {
@@ -1056,10 +1097,12 @@ h3.widget-title {
 			top: 0;
 	}
 	/* Image format */
-	.single-format-image #content {
+	.single-format-image #content,
+	.single-format-gallery #content {
 		padding-top: 0;
 	}
-	article.post.format-image {
+	article.post.format-image,
+	article.post.format-gallery {
 		margin: 0 auto 3em auto;
 		max-width: 1200px;
 		padding: 0;
@@ -1067,7 +1110,13 @@ h3.widget-title {
 	.archive.term-post-format-image .page-header,
 	article.post.format-image .entry-content,
 	article.post.format-image footer.entry-meta,
-	.single-format-image #nav-below {
+	.single-format-image #nav-below,
+	.archive.term-post-format-gallery .page-header,
+	article.post.format-gallery .entry-content,
+	article.post.format-gallery .entry-summary,
+	article.post.format-gallery .entry-title,
+	article.post.format-gallery .entry-meta,
+	.single-format-gallery #nav-below {
 		margin: 0 auto;
 		max-width: 565px;
 	}
@@ -1093,7 +1142,9 @@ h3.widget-title {
 @media screen and (max-width: 500px) {
 	/* Layout */
 	header#masthead {
-		padding: 0 5%;
+		background-color: #f1f1f1;
+		margin: 0;
+		padding: 1em 5%;
 		width: 90%;
 	}
 	article.post,
@@ -1109,10 +1160,12 @@ h3.widget-title {
 		margin: 0;
 	}
 	header#masthead .site-branding img {
-		width: 50px;
+		width: 40px;
 	}
 	header#masthead .site-title {
-		margin-top: 0.5em;
+		font-size: 21px;
+		font-size: 2.1rem;
+		margin: 0.4em 0 0;
 		vertical-align: top;
 		width: 70%;
 	}
@@ -1121,17 +1174,19 @@ h3.widget-title {
 	}
 	/* Content */
 	.entry-title {
-		font-size: 20px;
-		font-size: 2.0rem;
+		font-size: 21px;
+		font-size: 2.1rem;
 		line-height: 1.25em;
 	}
-	.entry-content {
-		font-size: 14px;
-		font-size: 1.4rem;
-		line-height: 1.5em;
+	.entry-content,
+	.entry-summary {
+		font-size: 16px;
+		font-size: 1.6rem;
+		line-height: 1.55em;
 	}
 	/* Image format */
-	article.post.format-image {
+	article.post.format-image,
+	article.post.format-gallery {
 		margin: 0 auto 3em auto;
 		width: 100%;
 		padding: 0;
@@ -1139,7 +1194,15 @@ h3.widget-title {
 	.archive.term-post-format-image .page-header,
 	article.post.format-image .entry-content,
 	article.post.format-image footer.entry-meta,
-	.single-format-image #nav-below {
+	.single-format-image #nav-below,
+	.archive.term-post-format-gallery .page-header,
+	article.post.format-gallery .entry-content,
+	article.post.format-gallery .entry-summary,
+	article.post.format-gallery .entry-title,
+	article.post.format-gallery .entry-meta,
+	.single-format-gallery #nav-below,
+	.attachment .entry-header,
+	.attachment .entry-caption {
 		margin: 0 auto;
 		max-width: 90%;
 	}
@@ -1165,15 +1228,15 @@ h3.widget-title {
 	header#masthead,
 	article.post,
 	#content #nav-below,
-	.page-header {
+	.page-header,
+	.attachment .entry-header,
+	.attachment .entry-caption {
 		padding: 0 5%;
 		width: 90%;
 	}
-	#content {
-		padding-top: 0;
-	}
-	/* Image format */
-	article.post.format-image {
+	/* Image and Gallery format */
+	article.post.format-image,
+	article.post.format-gallery {
 		margin: 0 auto 3em auto;
 		width: 100%;
 		padding: 0;
@@ -1181,7 +1244,13 @@ h3.widget-title {
 	.archive.term-post-format-image .page-header,
 	article.post.format-image .entry-content,
 	article.post.format-image footer.entry-meta,
-	.single-format-image #nav-below {
+	.single-format-image #nav-below,
+	.archive.term-post-format-gallery .page-header,
+	article.post.format-gallery .entry-content,
+	article.post.format-gallery .entry-summary,
+	article.post.format-gallery .entry-title,
+	article.post.format-gallery .entry-meta,
+	.single-format-gallery #nav-below {
 		margin: 0 auto;
 		max-width: 90%;
 	}
