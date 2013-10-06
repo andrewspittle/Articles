@@ -121,7 +121,7 @@ if ( ! function_exists( 'articles_the_attached_image' ) ) :
  */
 function articles_the_attached_image() {
 	$post                = get_post();
-	$attachment_size     = apply_filters( 'articles_attachment_size', array( 1200, 1200 ) );
+	$attachment_size     = 'full';
 	$next_attachment_url = wp_get_attachment_url();
 
 	/**
