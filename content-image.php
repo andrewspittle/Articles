@@ -20,7 +20,11 @@
 			if ( $attachments ) :
 				foreach ( $attachments as $attachment ) {
 					if ( ! is_single() )
-						echo wp_get_attachment_image( $attachment->ID, 'media-feature' );
+						printf( '<a href="%1$s" title="%2$s" rel="attachment">%3$s</a>',
+							get_permalink( $post->ID ),
+							the_title_attribute( array( 'echo' => false ) ),
+							wp_get_attachment_image( $attachment->ID, 'media-feature' )
+						);
 					else 
 						echo wp_get_attachment_image( $attachment->ID, 'media-feature-single' );
 				}

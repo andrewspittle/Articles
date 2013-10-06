@@ -11,7 +11,11 @@
 	<header class="entry-header">
 		<?php
 			if ( has_post_thumbnail() && ! is_single() ) { // check for a Post Thumbnail and a non-single template
-				the_post_thumbnail( 'media-feature' );
+				printf( '<a href="%1$s" title="%2$s" rel="attachment">%3$s</a>',
+					get_permalink( $post->ID ),
+					the_title_attribute( array( 'echo' => false ) ),
+					get_the_post_thumbnail( $post->ID, 'media-feature' )
+				);
 			}
 			elseif ( has_post_thumbnail() && is_single() ) { // check for a Post Thumbnail and a single template
 				the_post_thumbnail( 'media-feature' );
