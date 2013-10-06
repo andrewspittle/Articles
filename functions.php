@@ -150,7 +150,8 @@ function exclude_non_standard_post_formats_from_loop( &$wp_query ) {
 			'post-format-aside',
 			'post-format-link',
 			'post-format-image',
-			'post-format-gallery'
+			'post-format-gallery',
+			'post-format-status'
 		);
 		
 		// Attach this to the $wp_query object:
