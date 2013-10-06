@@ -133,6 +133,26 @@ hr {
     font-weight: normal;
     font-style: normal;
 }
+h1 {
+	font-size: 42px; 
+	line-height: 1em;
+}
+h2 {
+	font-size: 36px; 
+	line-height: 1.16em;
+}
+h3 {
+	font: normal bold 30px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+h4 {
+	font: normal bold 24px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+h5 {
+	font: normal bold 18px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+h6 {
+	font: normal bold 12px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
 p {
 	font-weight: 400;
 	margin-bottom: 1em;
@@ -151,11 +171,16 @@ li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
+dl {
+	margin: 0 1em;
+}
 dt {
+	font-size: 16px;
 	font-weight: bold;
 }
 dd {
-	margin: 0 1.5em 1.5em;
+	font-size: 16px;
+	margin: 0 0 1em;
 }
 b, strong {
 	font-weight: bold;
@@ -215,11 +240,28 @@ figure {
 	margin: 0;
 }
 table {
-	margin: 0 0 1.5em;
+	border-bottom: 1px solid #ededed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font: normal 13px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-size: 1.3rem;
+	line-height: 1.5em;
+	margin: 0 0 20px;
 	width: 100%;
 }
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
 th {
-	font-weight: bold;
+	color: #666;
+	font: normal bold 14px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+}
+td {
+	border-top: 1px solid #ededed;
+	padding: 6px 10px 6px 0;
 }
 img {
 	height: auto; /* Make sure images are scaled correctly. */
@@ -329,14 +371,6 @@ textarea {
 a {
 	color: #1982d1;
 }
-a:link,
-a:visited {
-	-webkit-transition: color .2s ease;
-	-moz-transition: color .2s ease;
-	-o-transition: color .2s ease;
-	-ms-transition: color .2s ease;
-	transition: color .2s ease;
-}
 a:visited {
 	color: purple;
 }
@@ -429,7 +463,9 @@ header#masthead img {
 	border-radius: 5px;
 }
 header#masthead .site-title {
+	font-size: 18px;
 	font-size: 1.8rem;
+	line-height: 1.5em;
 	margin: 0 0 0.5em;
 }
 header#masthead .site-title a {
@@ -574,6 +610,14 @@ header#masthead .site-description {
 }
 .single footer.entry-meta {
 	margin: 0.5em 0 0 0;
+}
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+	margin-top: 1rem;
 }
 .entry-content blockquote,
 .comment-content blockquote {
@@ -1131,22 +1175,30 @@ h3.widget-title {
 	}
 	/* Header */
 	header#masthead .site-branding {
+		border-bottom: 1px solid #e1e1e1;
 		padding: 2em;
 		text-align: left;
 		width: auto;
 	}
 	header#masthead .site-branding img {
-		margin: 0 0 0.5em;
+		margin: 0;
 		max-width: 75px;
 		height: inherit;
 	}
+	header#masthead .site-title {
+		font-weight: bold;
+		margin: 0;
+	}
 	nav.main-navigation {
 		position: relative;
-		padding: 0 2em;
+		padding: 2em 2em 0 2em;
 	}
 	nav.main-navigation li {
 		display: block;
 		float: none;
+	}
+	nav.main-navigation li a {
+		display: inline-block;
 	}
 	/* Content */
 	.entry-title {
