@@ -20,9 +20,9 @@
 			if ( $attachments ) :
 				foreach ( $attachments as $attachment ) {
 					if ( ! is_single() )
-						echo wp_get_attachment_image( $attachment->ID, 'image-format' );
+						echo wp_get_attachment_image( $attachment->ID, 'media-feature' );
 					else 
-						echo wp_get_attachment_image( $attachment->ID, 'image-format-single' );
+						echo wp_get_attachment_image( $attachment->ID, 'media-feature-single' );
 				}
 			else :
 				remove_filter( 'the_content', 'articles_remove_images', 2 ); // Remove content filter from functions.php if there are no attachments returned
