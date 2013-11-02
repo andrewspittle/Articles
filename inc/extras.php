@@ -73,7 +73,7 @@ add_filter( 'wp_title', 'articles_wp_title', 10, 2 );
  * Filters the_excerpt to a shorter length and customizes the [...] ending.
  */
 function articles_excerpt_length( $length ) {
-	return 25;
+	return 50;
 }
 add_filter( 'excerpt_length', 'articles_excerpt_length', 999 );
 
