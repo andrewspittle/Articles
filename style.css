@@ -644,6 +644,15 @@ footer#colophon a:active {
 	border-bottom: 1px solid #e1e1e1;
 	color: #666;
 }
+.entry-meta div.entry-date:before,
+div.entry-meta .posted-on:before {
+	color: #cccccc;
+	content: '\f303';
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/0.9em 'Genericons';
+	vertical-align: text-bottom;
+}
 .entry-meta .entry-tags:before {
 	color: #cccccc;
 	content: '\f302';
@@ -1350,6 +1359,10 @@ h3.widget-title {
 	.comment-content {
 		font-size: 14px;
 		font-size: 1.4rem;
+	}
+	.entry-meta .entry-tags {
+		display: block;
+		margin: 5px 0;
 	}
 	/* Featured images */
 	.heroimage {
