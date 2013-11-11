@@ -183,16 +183,11 @@ function articles_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'articles' ),
+	printf( __( '<span class="posted-on">Posted on %1$s</span>', 'articles' ),
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
 			$time_string
-		),
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'articles' ), get_the_author() ) ),
-			esc_html( get_the_author() )
 		)
 	);
 }
