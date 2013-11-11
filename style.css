@@ -751,7 +751,8 @@ article.format-link .entry-date {
 .attachment-media-feature,
 .attachment-featured-single,
 .attachment-media-feature-single {
-	margin-bottom: 1em;
+	display: block;
+	margin: 0 auto 1em auto;
 }
 
 /* Make sure embeds and iframes fit their containers */
