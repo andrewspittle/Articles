@@ -582,7 +582,7 @@ header#masthead .site-description {
 .sticky {
 }
 .hentry {
-	margin: 1em 0 3em;
+	margin: 1em 0 3.5em;
 }
 .entry-header {
 	position: relative;
@@ -606,9 +606,6 @@ header#masthead .site-description {
 	font: 14px/1.5rem "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 1.4rem;
 	margin: 0.5em 0;
-}
-.single .entry-meta {
-	margin: 0.5em 0 2em 0;
 }
 .single footer.entry-meta {
 	margin: 0.5em 0 0 0;
@@ -652,7 +649,7 @@ div.entry-meta .posted-on:before {
 	content: '\f303';
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
-	font: normal 16px/0.9em 'Genericons';
+	font: normal 16px/1em 'Genericons';
 	vertical-align: text-bottom;
 }
 .entry-meta .entry-tags:before {
@@ -983,7 +980,7 @@ h3.widget-title {
 .archive .page-header {
 	margin: 0 auto 0 auto;
 	padding: 0 0 2em;
-	max-width: 565px;
+	max-width: 640px;
 }
 .search .page-title,
 .archive .page-title,
@@ -1028,7 +1025,7 @@ h3.widget-title {
 /* =Medium Viewports
 ----------------------------------------------- */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 924px) {
 	/* Layout */
 	header#masthead {
 		background-color: #f1f1f1;
@@ -1099,16 +1096,14 @@ h3.widget-title {
 		max-width: 640px;
 	}
 	nav.main-navigation li {
-		font-size: 14px;
+		font-size: 16px;
 		margin-right: 20px;
 	}
 	/* Content */
 	.entry-title {
 		display: inline;
-	}
-	.entry-title {
-		font-size: 24px;
-		font-size: 2.4rem;
+		font-size: 28px;
+		font-size: 2.8rem;
 		line-height: 1.25em;
 	}
 	.entry-content {
@@ -1123,10 +1118,9 @@ h3.widget-title {
 	}
 	/* Featured images */
 	.heroimage {
-		border-radius: 50%;
 		float: right;
-		margin: 0 0 1em 1em;
-		width: 75px;
+		margin: 7px 0 0 0;
+		width: 90px;
 		height: auto;
 	}
 	/* Image format */
@@ -1165,7 +1159,7 @@ h3.widget-title {
 /* =Larger Viewports
 ----------------------------------------------- */
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 925px) {
 	/* Layout */
 	header#masthead {
 		background-color: #f1f1f1;
@@ -1227,10 +1221,14 @@ h3.widget-title {
 		font-size: 2.4rem;
 		line-height: 1.25em;
 	}
-	.entry-content,
-	.entry-summary {
+	.entry-content {
 		font-size: 22px;
 		font-size: 2.2rem;
+		line-height: 1.5em;
+	}
+	.entry-summary {
+		font-size: 18px;
+		font-size: 1.8rem;
 		line-height: 1.5em;
 	}
 	.comment-content {
@@ -1242,10 +1240,10 @@ h3.widget-title {
 	}
 	/* Featured images */
 	.heroimage {
-		border-radius: 50%;
 		display: block;
+		margin-top: 7px;
 		position: absolute;
-			right: -130px;
+			left: -130px;
 			top: 0;
 	}
 	/* Image format */
@@ -1457,7 +1455,7 @@ h3.widget-title {
 	}
 }
 
-@media screen and (min-width: 800px) and (max-width: 1050px) {
+@media screen and (min-width: 925px) and (max-width: 1200px) {
 	img.heroimage {
 		display: none;
 	}
