@@ -154,7 +154,9 @@ h6 {
 	font: normal bold 12px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 p {
+	font-family: "freight-text-pro-1", "freight-text-pro-2", Georgia, Times, serif;
 	font-weight: 400;
+	letter-spacing: 0.01rem;
 	margin-bottom: 1em;
 }
 ul, ol {
@@ -601,12 +603,12 @@ header#masthead .site-description {
 }
 .entry-meta {
 	color: #989898;
-	font: 12px/1.5rem "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-size: 1.2rem;
+	font: 14px/1.5rem "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 1.4rem;
 	margin: 0.5em 0;
 }
 .single .entry-meta {
-	margin: 0.5em 0 1.5em 0;
+	margin: 0.5em 0 2em 0;
 }
 .single footer.entry-meta {
 	margin: 0.5em 0 0 0;
@@ -659,6 +661,7 @@ div.entry-meta .posted-on:before {
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
 	font: normal 16px/1em 'Genericons';
+	padding-right: 4px;
 	vertical-align: text-bottom;
 }
 .entry-meta .entry-tags,
@@ -1039,7 +1042,7 @@ h3.widget-title {
 		margin: 2em auto 0 auto;
 		padding: 1em 5% 5em 5%;
 		width: 90%;
-		max-width: 565px;
+		max-width: 640px;
 	}
 	article.post,
 	article.page,
@@ -1049,7 +1052,7 @@ h3.widget-title {
 		margin: 0 auto 3em auto;
 	    padding-left: 5%;
 		padding-right: 5%;
-	    max-width: 565px;
+	    max-width: 640px;
 	}
 	article.post {
 		margin-bottom: 5em;
@@ -1058,7 +1061,7 @@ h3.widget-title {
 	header#masthead .site-branding {
 		margin: 2em auto;
 		text-align: left;
-		max-width: 565px;
+		max-width: 640px;
 	}
 	header#masthead .site-branding img {
 		float: left;
@@ -1093,7 +1096,7 @@ h3.widget-title {
 	}
 	nav.main-navigation ul {
 		margin: 0 auto;
-		max-width: 565px;
+		max-width: 640px;
 	}
 	nav.main-navigation li {
 		font-size: 14px;
@@ -1109,8 +1112,13 @@ h3.widget-title {
 		line-height: 1.25em;
 	}
 	.entry-content {
-		font-size: 18px;
-		font-size: 1.8rem;
+		font-size: 22px;
+		font-size: 2.2rem;
+		line-height: 1.5em;
+	}
+	.entry-summary {
+		font-size: 22px;
+		font-size: 2.2rem;
 		line-height: 1.5em;
 	}
 	/* Featured images */
@@ -1143,7 +1151,7 @@ h3.widget-title {
 	article.post.format-gallery .entry-meta,
 	.single-format-gallery #nav-below {
 		margin: 0 auto;
-		max-width: 565px;
+		max-width: 640px;
 	}
 	article.post.format-gallery .entry-title {
 		display: block;
@@ -1356,8 +1364,8 @@ h3.widget-title {
 	}
 	.entry-content,
 	.entry-summary {
-		font-size: 16px;
-		font-size: 1.6rem;
+		font-size: 18px;
+		font-size: 1.8rem;
 		line-height: 1.55em;
 	}
 	.comment-content {
