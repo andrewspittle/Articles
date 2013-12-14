@@ -1192,7 +1192,7 @@ h3.widget-title {
 	    margin-right: auto;
 	    padding-left: 2rem;
 		padding-right: 2rem;
-	    max-width: 565px;
+	    max-width: 640px;
 	}
 	/* Header */
 	header#masthead .site-branding {
@@ -1229,13 +1229,16 @@ h3.widget-title {
 	}
 	.entry-content,
 	.entry-summary {
-		font-size: 18px;
-		font-size: 1.8rem;
-		line-height: 1.55em;
+		font-size: 22px;
+		font-size: 2.2rem;
+		line-height: 1.5em;
 	}
 	.comment-content {
 		font-size: 16px;
 		font-size: 1.6rem;
+	}
+	.single .hentry {
+		margin-top: 0;
 	}
 	/* Featured images */
 	.heroimage {
@@ -1267,11 +1270,11 @@ h3.widget-title {
 	article.post.format-gallery .entry-meta,
 	.single-format-gallery #nav-below {
 		margin: 0 auto;
-		max-width: 565px;
+		max-width: 640px;
 	}
 	article.post.format-image .entry-meta {
 		margin: inherit auto;
-		max-width: 565px;
+		max-width: 640px;
 	}
 	/* Sidebar */
 	#secondary {
